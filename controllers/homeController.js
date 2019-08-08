@@ -32,3 +32,11 @@ exports.showAllProducts = async (request, response) => {
     })
     .catch(error => console.error(error));
 };
+
+exports.deleteProduct = async (request, response, next) => {
+  Product.deleteOne({
+    _id: request.params.id
+  }).then(() => {
+    response.json({ message: "Produto excluido com sucesso" }).redirect("/");
+  });
+};
