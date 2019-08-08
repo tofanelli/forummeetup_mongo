@@ -1,9 +1,14 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 // Porta
 const PORT = process.env.PORT || 3000;
+
+// Inicializacao das rotas
+const homeRoute = require("./routes/homeRoute");
 
 // Body Parser
 app.use(bodyParser.json()); // for parsing application/json
@@ -16,7 +21,6 @@ db.on("error", error => console.error(error));
 db.once("open", () => console.log("conectado no banco"));
 
 // Rotas
-const homeRoute = require("./routes/homeRoute");
 app.use("/", homeRoute);
 
 app.listen(PORT, () => {
