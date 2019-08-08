@@ -1,0 +1,22 @@
+{
+  "name": "forummeetup_mongo",
+  "version": "1.0.0",
+  "description": "API feita em Node e Mongo para o Meetup Flutter e Node em Belo Horizone",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodem index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Fabrizio Tofanelli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.6.9"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "nodemon": "^1.19.1"
+  }
+}
