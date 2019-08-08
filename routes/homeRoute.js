@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (request, response) => {
+// Controllers
+const productsHome = require("../controllers/homeController");
+
+router.get("/", productsHome, (request, response) => {
   response.send("/index");
 });
 
